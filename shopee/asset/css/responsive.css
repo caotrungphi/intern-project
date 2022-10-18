@@ -1,0 +1,115 @@
+/* mobile and tablet */
+@media (max-width: 1023px) {
+    .apex::after,
+    .apex::before,
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .container {
+        margin-top: var(--header-height);
+    }
+    .header__category {
+        display: flex;
+    }
+    .mobile__category {
+        display: flex;
+    }
+    .search__cart-empty,
+    .search__cart-product {
+        position: fixed;
+        top: var(--search-height);
+        left: 0;
+        right: 0;
+        padding: 0 calc(calc(100% - 644px) / 2);
+        width: unset;
+    }
+    .search__cart-product-img {
+        width: 10%;
+    }
+}
+/* tablet */
+@media (min-width: 740px) and  (max-width: 1023px) {
+    :root {
+        --header-height: 113px;
+        --search-height: 68px;
+    }
+    .hide-on-tablet {
+        display: none;
+    }
+    .search__cart {
+        margin: 7px 0px 0px 40px;
+    }
+}
+/* mobile */
+@media (max-width: 739px) {
+    :root {
+        --header-height: 98px;
+        --search-height: 55px;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .search {
+        justify-content: space-between;
+        padding: 0 8px;
+    }
+    .search__icon {
+        display: block;
+    }
+    .search__logo {
+        width: unset;
+    }
+    .search__logo-icon {
+        width: 120px;
+    }
+    .search__bar {
+        position: fixed;
+        top: var(--search-height);
+        left: 0;
+        right: 0;
+        height: var(--nav-height);
+        padding-right: 10px;
+        animation: growthBar linear .4s;
+    }
+    @keyframes growthBar {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+            background-color: var(--primary-color);
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+            background-color: var(--white-color);
+        }
+    }
+    .search__bar-history {
+        width: 100%;
+        padding-left: 10px;
+        box-shadow: unset;
+    }
+    .search__cart {
+        margin: 6px 0 0;
+    }
+    .pagination-link {
+        margin: 0 4px;
+        padding: 3px 9px;
+        font-size: 1.6rem;
+    }
+    .mobile__product.sm-gutter {
+        margin: 0 6px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer-qr {
+        justify-content: center;
+    }
+}

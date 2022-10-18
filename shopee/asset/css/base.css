@@ -1,0 +1,127 @@
+:root {
+    --text-color: #444;
+    --blur-color: #888;
+    --black-color: #000;
+    --hover-color: #ececec;
+    --white-color: #fff;
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
+    --header-height: 120px;
+    --search-height: 90px;
+    --nav-height: calc(var(--header-height) - var(--search-height));
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+.apex::before {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: -27px;
+    border-width: 14px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+.apex::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    top: -20px;
+    right: 0;
+}
+/* btn */
+.btn {
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity .2s ease;
+}
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--hover:hover {
+    background-color: var(--border-color);
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* pagination */
+.pagination-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 20px;
+}
+.pagination-item {
+
+}
+.pagination-link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blur-color);
+    margin: 0 10px;
+    padding: 7px 15px;
+    display: inline-block;
+}
+.pagination-link i {
+    font-size: 1.7rem;
+    margin-bottom: -2px;
+    display: block;
+}
+/* --------------modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.modal__overflow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal__body {
+    background-color: var(--white-color);
+    border-radius: 2px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    animation: growth linear .1s;
+}
+.text-align-center {
+    text-align: center;
+}
+@keyframes growth {
+    from {
+        transform: scale(0.6);
+    }
+    to {
+        transform: scale(1);
+    }
+}
