@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #ed215b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+}
+.app {
+  width: 400px;
+  margin: 0 auto;
+}
+.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+.header_name {
+  text-align: center;
+  flex: 1;
+}
+.header_name h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.header_name p {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin: 5px;
+}
+.header-icon {
+  color: var(--primary-color);
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.face {
+  width: 100%;
+  padding: 0 50px;
+  margin: auto;
+}
+.face_img {
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.control {
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5c5a5c;
+}
+.repeat.active {
+  color: var(--primary-color)
+}
+.backward:active {
+  color: var(--primary-color)
+}
+.pause {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.pause .fa-pause {
+  display: none;
+}
+.pause.active .fa-play {
+  display: none;
+}
+.pause.active .fa-pause {
+  display: inline;
+}
+.forward:active {
+  color: var(--primary-color)
+}
+.shuffle.active {
+  color: var(--primary-color)
+}
+.control-icon {
+  padding: 14px;
+}
+.bar {
+  width: 100%;
+  margin-top: 14px;
+}
+.list {
+  background-color: #e7e7e7;
+  padding: 1px 12px 20px;
+  margin-top: 477px;
+
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: 12px;
+}
+.item.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.item.active .item_singer {
+  color: #fff;
+}
+.item_img {
+  width: 50px;
+  margin-right: 16px;
+}
+.item_song {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+.item_singer {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.3rem;
+}
+.item_btn {
+  margin-left: auto;
+  padding: 10px;
+  margin-top: -26px;
+}

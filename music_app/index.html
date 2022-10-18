@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./acces/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--[if lte IE 11]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" integrity="sha512-BWbLJlfp8hzXlxT6K5KLdxPVAj+4Zn2e4FVq5P7NSFH/mkAJ18UiZRQUD4anR3jyp0/WYkeZ0Zmq5EWWrDxneQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="app">
+    
+    <div class="fix">
+      <header class="header">
+        <i class="header-icon id= fa-solid fa-minus" id="minus"></i>
+        <div class="header_name">
+          <p>Now playing:</p>
+          <h2>NO SONG YET</h2>
+        </div>
+        <i class="header-icon fa-solid fa-plus" id="add"></i>
+      </header>
+  
+      <div class="face">
+        <div class="face_img" style="background-image: url(./acces/img/img-begin.png);"></div>
+      </div>
+  
+      <div class="control">
+        <div class="repeat control-icon">
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="backward control-icon">
+          <i class="fa-solid fa-backward"></i>
+        </div>
+        <div class="pause"> 
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+        <div class="forward control-icon">
+          <i class="fa-solid fa-forward"></i>
+        </div>
+        <div class="shuffle control-icon">
+          <i class="fa-solid fa-shuffle"></i>
+        </div>
+      </div>
+        
+      <input type="range" name="bar" class="bar" min="0" value="1" step="1" max="100">
+
+    </div>
+    
+    <audio class="music" src=""></audio>
+
+    <ul class="list">
+      
+    </ul>
+  </div>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
